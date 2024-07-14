@@ -249,6 +249,7 @@ blockquote::after {
     }
     .testimonial__item {
         padding-bottom: 2.4375rem;
+        padding-right: 1.875rem;
     }
     .testimonial__item:nth-child(3) {
         margin-top: 2rem;
