@@ -81,6 +81,7 @@ blockquote::after {
     position: relative;
     padding-top: 5.125rem;
     padding-bottom: 6.1875rem;
+    min-height: 100vh;
     font-family: var(--font-sans);
     font-size: var(--text-base);
 }
