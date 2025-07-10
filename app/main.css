@@ -26,13 +26,11 @@
             url("./assets/fonts/league-spartan-v14-latin-700.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 :root {
-    --clr-pink-500: hsl(333, 80%, 67%);
-
-    --clr-magenta-500: hsl(300, 43%, 22%);
-    --clr-magenta-200: hsl(303, 10%, 53%);
-    --clr-magenta-100: hsl(300, 24%, 96%);
-
-    --clr-white: hsl(0, 0%, 100%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-pink-500: hsl(333, 80%, 67%);
+    --color-magenta-500: hsl(300, 43%, 22%);
+    --color-magenta-200: hsl(303, 10%, 53%);
+    --color-magenta-100: hsl(300, 24%, 96%);
 
     --shadow-sm-inset: inset 0 0 32px -24px hsla(300, 43%, 22%, 0.25);
     --shadow-md: -12px 12px 32px -8px hsla(300, 43%, 22%, 0.5);
@@ -128,25 +126,25 @@ main::after {
     width: min(100vw - 3rem, 32rem);
     margin: 0 auto;
 }
-.main__headline {
+.intro {
     z-index: 999;
     position: relative;
     text-align: center;
     margin-bottom: 2.4375rem;
 }
-.main__headline__title {
-    color: var(--clr-magenta-500);
+.intro__title {
+    color: var(--color-magenta-500);
     font-size: 2.5rem;
     line-height: 2rem;
     margin-bottom: 1.4375rem;
     letter-spacing: -0.035em;
 }
-.main__headline__description {
+.intro__description {
     font-size: 1.1875rem;
     line-height: 1.5625rem;
     letter-spacing: -0.034em;
     font-weight: var(--font-medium);
-    color: var(--clr-magenta-200);
+    color: var(--color-magenta-200);
 }
 .rating__wrapper {
     z-index: 999;
@@ -154,7 +152,7 @@ main::after {
     text-align: center;
     margin-bottom: 3.0625rem;
     letter-spacing: 0.03em;
-    color: var(--clr-magenta-500);
+    color: var(--color-magenta-500);
 }
 .rating__list > * + * {
     margin-top: 1rem;
@@ -162,16 +160,16 @@ main::after {
 .rating__item {
     padding: 1rem 1rem 0.9375rem 1rem;
     border-radius: var(--rounded-sm);
-    background-color: var(--clr-magenta-100);
+    background-color: var(--color-magenta-100);
     box-shadow: var(--shadow-sm-inset);
 }
-.rating__item__star {
+.rating__stars {
     width: fit-content;
     margin: 0 auto;
     display: flex;
     margin-bottom: 0.9375rem;
 }
-.rating__item__star > * + * {
+.rating__stars > * + * {
     margin-left: 0.5rem;
 }
 .testimonial__wrapper {
@@ -179,42 +177,40 @@ main::after {
     position: relative;
 }
 .testimonial__list {
-    color: var(--clr-magenta-100);
+    color: var(--color-magenta-100);
 }
 .testimonial__list > * + * {
     margin-top: 1rem;
 }
 .testimonial__item {
     padding: 2.5rem 2rem 1.9375rem 2rem;
-    background-color: var(--clr-magenta-500);
+    background-color: var(--color-magenta-500);
     border-radius: var(--rounded-sm);
     box-shadow: var(--shadow-md);
 }
-.testimonial__person {
+.testimonial-author__wrapper {
     letter-spacing: 0.03em;
     display: flex;
     align-items: center;
     margin-bottom: 1.6875rem;
 }
-.testimonial__person__avatar {
+.testimonial-author__avatar {
     width: 2.5rem;
     height: 2.5rem;
     margin-right: 1.4375rem;
     border-radius: var(--rounded-full);
 }
-.testimonial__person__name {
+.testimonial-author__name-wrapper {
     margin-top: 0.125rem;
-    font-size: inherit;
 }
-.testimonial__person__name--text {
-    display: block;
+.testimonial-author__name {
     margin-bottom: 0.25rem;
 }
-.testimonial__person__name--status {
+.testimonial-author__status {
     font-weight: var(--font-normal);
-    color: var(--clr-pink-500);
+    color: var(--color-pink-500);
 }
-.testimonial__qoute {
+.testimonial__content {
     line-height: 1.375rem;
     letter-spacing: 0.016em;
 }
@@ -235,18 +231,18 @@ main::after {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    .main__headline {
+    .intro {
         text-align: start;
         margin: 0;
         padding-bottom: 4.4375rem;
     }
-    .main__headline__title {
+    .intro__title {
         font-size: 3.5rem;
         line-height: 3rem;
         max-width: 12ch;
         margin-bottom: 1.625rem;
     }
-    .main__headline__description {
+    .intro__description {
         max-width: 40ch;
     }
     .rating__list {
@@ -269,7 +265,7 @@ main::after {
     .rating__item:nth-child(3) {
         padding-left: 1.9375rem;
     }
-    .rating__item__star {
+    .rating__stars {
         margin: 0 2rem 0 0;
     }
     .testimonial__wrapper {
