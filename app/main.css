@@ -101,7 +101,7 @@ blockquote::after {
     border-width: 0;
 }
 
-.main__container {
+main {
     position: relative;
     padding-top: 5.125rem;
     padding-bottom: 6.1875rem;
@@ -109,15 +109,18 @@ blockquote::after {
     font-family: var(--font-primary);
     font-size: var(--text-base);
 }
-.main__bg-pattern {
+main::before,
+main::after {
     position: absolute;
     pointer-events: none;
 }
-.main__bg-pattern--top {
+main::before {
+    content: url("./assets/images/bg-pattern-top-mobile.svg");
     top: 0;
     left: 0;
 }
-.main__bg-pattern--bottom {
+main::after {
+    content: url("./assets/images/bg-pattern-bottom-mobile.svg");
     bottom: 0;
     right: 0;
 }
@@ -217,9 +220,15 @@ blockquote::after {
 }
 
 @media screen and (min-width: 64em) {
-    .main__container {
+    main {
         padding-top: 7.375rem;
         padding-bottom: 6.25rem;
+    }
+    main::before {
+        content: url("./assets/images/bg-pattern-top-desktop.svg");
+    }
+    main::after {
+        content: url("./assets/images/bg-pattern-bottom-desktop.svg");
     }
     .main__wrapper {
         width: min(100vw - 3rem, 69.375rem);
