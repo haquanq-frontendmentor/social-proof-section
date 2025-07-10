@@ -1,3 +1,30 @@
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "League Spartan";
+    font-style: normal;
+    font-weight: 400;
+    src: url("./assets/fonts/league-spartan-v14-latin-regular.woff2") format("woff2"),
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+            url("./assets/fonts/league-spartan-v14-latin-regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "League Spartan";
+    font-style: normal;
+    font-weight: 500;
+    src: url("./assets/fonts/league-spartan-v14-latin-500.woff2") format("woff2"),
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+            url("./assets/fonts/league-spartan-v14-latin-500.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "League Spartan";
+    font-style: normal;
+    font-weight: 700;
+    src: url("./assets/fonts/league-spartan-v14-latin-700.woff2") format("woff2"),
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+            url("./assets/fonts/league-spartan-v14-latin-700.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
 :root {
     --clr-pink-500: hsl(333, 80%, 67%);
 
@@ -10,7 +37,7 @@
     --shadow-sm-inset: inset 0 0 32px -24px hsla(300, 43%, 22%, 0.25);
     --shadow-md: -12px 12px 32px -8px hsla(300, 43%, 22%, 0.5);
 
-    --font-sans: "League Spartan", sans-serif;
+    --font-primary: "League Spartan", sans-serif;
     --font-normal: 400;
     --font-medium: 500;
     --font-bold: 700;
@@ -82,7 +109,7 @@ blockquote::after {
     padding-top: 5.125rem;
     padding-bottom: 6.1875rem;
     min-height: 100vh;
-    font-family: var(--font-sans);
+    font-family: var(--font-primary);
     font-size: var(--text-base);
 }
 .main__bg-pattern {
